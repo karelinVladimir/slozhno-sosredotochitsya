@@ -1,5 +1,215 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+/* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: var(--fonts);
+  font-size: var(--font-size, sans-serif);
+  font-weight: var(--font-weight-text);
+  background: url(../images/cover-image-dark.png) no-repeat center / cover;
+  background-attachment: fixed;
+  padding: var(--global-padding);
+  color: var(--main-text-color);
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  min-height: 100vh;
+}
+
+.header__theme-menu {
+  align-self: center;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  justify-content: end;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: none;
+  cursor: pointer;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+  pointer-events: none;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.title {
+  font-weight: var(--font-weight-title);
+  font-size: var(--big-size);
+  line-height: 83%;
+  color: var(--title-shadow-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.title__decor {
+  background-color: var(--accent-color);
+  color: var(--text-bg-color);
+}
+
+.header__description {
+  min-height: 117px;
+  align-self: center;
+  font-weight: var(--font-weight-title);
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--accent-color);
+  inset-inline-end: 0;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+  inset-block-end: 0;
+}
+
+.rec-decor {
+  position: absolute;
+  inset-inline-end: 10px;
+  width: 52px;
+  height: 26px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  line-height: 139%;
+}
+
+.rec-decor::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background-color: var(--accent-color);
+  border-radius: 100%;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  inset-block-start: 8px;
+  inset-inline-start: 42px;
+}
+
+/* header media */
+
+/* main */
+
+.main {
+  padding-block-start: 40px;
+}
+
+.focus__list {
+  display: grid;
+}
+
+.focus__title {
+  font-weight: var(--font-weight-title);
+  line-height: 130%;
+  color: var(--accent-color);
+  font-size: inherit;
+  margin-block-end: 20px;
+}
+
+.content__subtitle {
+  font-weight: var(--font-weight-title);
+  font-size: inherit;
+  margin-block-end: 10px;
+}
+
+.content__description {
+  line-height: 130%;
+  color: var(--main-text-color);
+}
+
+.content__description:not(
+    .focus__item:last-child .content__description:last-child
+  ) {
+  margin-block-end: 20px;
+}
+
+.content__description_link {
+  text-decoration: none;
+  text-shadow: 2px 1px 0 var(--accent-color);
+}
+
+.content__description_link:hover {
+  font-size: 25px;
+  border-bottom: 1px solid var(--main-text-color);
+}
+
+.content__description_link:focus {
+  outline: none;
+}
+
+.content__description_link:focus-visible {
+  outline: 1px solid var(--main-text-color);
+}
+
+/* galery */
+
+.gallery {
+  padding-block-start: clamp(3.125rem, 2.0416rem + 4.6225vw, 5rem);
+}
+
+.gallery__title {
+  margin-block-end: clamp(0.625rem, 0.2639rem + 1.5408vw, 1.25rem);
+  font-weight: var(--font-weight-title);
+  font-size: inherit;
+  line-height: 130%;
+}
+
+.galery__wrapper {
+  display: grid;
+  gap: clamp(0.625rem, 0.2639rem + 1.5408vw, 1.25rem);
+  margin-block-end: 40px;
+}
+
+.galery__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* footer */
+
+.footer {
+  position: relative;
+  display: grid;
+  min-width: 355px;
+  min-height: 667px;
+}
+
+.footer__title {
+  align-self: center;
+  justify-self: center;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.footer.decorated-zone::before {
+  inset-block-start: 10px;
 }
