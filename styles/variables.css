@@ -13,5 +13,5 @@
   --font-weight-text: 400;
   --font-size: 18px;
   --big-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
-  --global-padding: clamp(0.625rem, 0.2639rem + 1.5408vw, 1.25rem);
+  --global-padding: 10px;
 }
