@@ -7,12 +7,15 @@
   --accent-color: #ff0070;
   --main-text-color: #f1b2ce;
   --title-shadow-color: #db00ff;
+  --title-color: #ff0070;
   --text-background-color: #000028;
   --background-color: #000028;
+  --decorated-zone-color: #ff0070;
+  --button-color: #ff0070;
+  --button-hover-color: rgb(255, 0, 112, 0.4);
   --fonts: "IBM Plex Mono";
   --font-weight-title: 700;
   --font-weight-text: 400;
   --font-size: 18px;
   --big-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
-  /* --padding-header: 10px; */
 }
