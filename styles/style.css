@@ -262,26 +262,24 @@
     gap: 80px;
   }
 
-  .reduces-concentration > .focus__title {
+  .focus-content-column > .focus__title {
     width: calc((100% - 40px) / 3);
   }
 
-  .hard-to-concentrate,
-  .how-to-concentrate {
+  .focus-content-column-right {
     display: grid;
     grid-template-columns: 1fr 2fr;
   }
 }
 
 @media (width >= 1024px) {
-  .reduces-concentration .content {
+  .focus-content-column .content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
 
-  .hard-to-concentrate,
-  .how-to-concentrate {
+  .focus-content-column-right {
     grid-template-columns: min(314px) 1fr;
   }
 }
