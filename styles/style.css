@@ -262,24 +262,24 @@
     gap: 80px;
   }
 
-  .focus-content-column > .focus__title {
+  .section-content > .focus__title {
     width: calc((100% - 40px) / 3);
   }
 
-  .focus-content-column-right {
+  .section {
     display: grid;
     grid-template-columns: 1fr 2fr;
   }
 }
 
 @media (width >= 1024px) {
-  .focus-content-column .content {
+  .section-content .content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
 
-  .focus-content-column-right {
+  .section {
     grid-template-columns: min(314px) 1fr;
   }
 }
